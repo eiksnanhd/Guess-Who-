@@ -256,7 +256,7 @@
 
   function startGame() {
     if (!isHost || !currentRoomCode) return;
-    socket.emit('start_game', { room_code: currentRoomCode });
+    socket.emit('start_game', { room_code: currentRoomCode, username });
   }
 
   socket.on('room_created', code => {
